@@ -1,0 +1,16 @@
+[
+{
+  "modid": "friendNamer",
+  "name": "Friend Namer",
+  "description": "A Mod that you can use to add custom names to your friends",
+  "version": '${version}',
+  "mcversion": "${mcversion}",
+  "url": "http://kaminocoding.github.io",
+  "updateUrl": "",
+  "authorList": ["Cyb3rwarri0r8"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
