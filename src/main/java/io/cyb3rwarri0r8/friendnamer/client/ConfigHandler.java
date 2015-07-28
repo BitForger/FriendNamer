@@ -27,6 +27,10 @@ import java.io.File;
 public class ConfigHandler {
     public static Configuration configuration;
 
+    public static String[] usernames;
+
+    public static String[] nicknames;
+
     public static void init(File configFile){
         if (configuration == null){
             configuration = new Configuration(configFile);
@@ -36,7 +40,8 @@ public class ConfigHandler {
 
     private static void loadConfiguration(){
 
-
+        usernames = configuration.getStringList("Usernames", Configuration.CATEGORY_GENERAL, new String[]{"Enter"," Usernames"}, "Enter the username you want to change");
+        nicknames = configuration.getStringList("Nicknames", Configuration.CATEGORY_GENERAL, new String[]{"Enter the nickname", " In the same position as the above username"}, "Enter the nickname");
 
         if (configuration.hasChanged()){
             configuration.save();

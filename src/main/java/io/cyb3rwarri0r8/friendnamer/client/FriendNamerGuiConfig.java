@@ -43,6 +43,11 @@ public class FriendNamerGuiConfig extends GuiConfig {
      * @param title                  the desired title for this screen. For consistency it is recommended that you pass the path of the config file being
      */
     public FriendNamerGuiConfig(GuiScreen parentScreen) {
-        super(parentScreen, new ConfigElement(ConfigHandler.configuration.getCategory(Configuration.CATEGORY_GENERAL)).getChildElements(), Strings.MODID, false, false, GuiConfig.getAbridgedConfigPath(ConfigHandler.configuration.toString()));
+        super(parentScreen,
+                new ConfigElement(ConfigHandler.configuration.getCategory(Configuration.CATEGORY_GENERAL)).getChildElements(),
+                Strings.MODID,
+                false,
+                false,
+                GuiConfig.getAbridgedConfigPath(ConfigHandler.configuration.toString()));
     }
 }

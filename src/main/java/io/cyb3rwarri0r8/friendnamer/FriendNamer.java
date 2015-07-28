@@ -1,6 +1,7 @@
 package io.cyb3rwarri0r8.friendnamer;
 
 import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.ModMetadata;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLLoadEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
@@ -9,7 +10,8 @@ import io.cyb3rwarri0r8.friendnamer.client.ConfigHandler;
 import io.cyb3rwarri0r8.friendnamer.lib.Strings;
 import net.minecraftforge.common.config.Configuration;
 
-/**
+
+/*
  * FriendNamer - A Minecraft Modification
  * Copyright (C) 2015 Cyb3rWarri0r8
  * <p/>
@@ -27,6 +29,7 @@ import net.minecraftforge.common.config.Configuration;
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 @Mod(modid = Strings.MODID, version = Strings.VERSION, guiFactory = Strings.GUI_FACTORY_CLASS)
+
 public class FriendNamer {
 
     public static Configuration configFile;
@@ -34,10 +37,16 @@ public class FriendNamer {
     @Mod.Instance
     public static FriendNamer instance;
 
+    public static ModMetadata modMetadata;
+
+
     @Mod.EventHandler
     public void preinit(FMLPreInitializationEvent event){
         configFile = new Configuration(event.getSuggestedConfigurationFile());
         ConfigHandler.init(configFile.getConfigFile());
+
+        modMetadata = event.getModMetadata();
+
     }
 
     @Mod.EventHandler

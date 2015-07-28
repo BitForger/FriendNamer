@@ -1,5 +1,7 @@
 package io.cyb3rwarri0r8.friendnamer.lib;
 
+import io.cyb3rwarri0r8.friendnamer.FriendNamer;
+
 /**
  * FriendNamer - A Minecraft Modification
  * Copyright (C) 2015 Cyb3rWarri0r8

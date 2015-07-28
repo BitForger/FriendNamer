@@ -7,9 +7,9 @@
 ****************************
 :setDevVersion
 :setDevVersion - Incrementing Dev Version
-:incrementPatch - Current Version: 0.0.22
-:incrementPatch - New Version:     0.0.23
+:incrementPatch - Current Version: 0.0.32
+:incrementPatch - New Version:     0.0.33
 
 BUILD SUCCESSFUL
 
-Total time: 0.642 secs
+Total time: 2.0 secs

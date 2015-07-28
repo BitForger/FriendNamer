@@ -18,9 +18,6 @@ buildscript {
     }
 }
 
-
-
-
 apply plugin: 'forge'
 
 version
@@ -32,27 +29,6 @@ minecraft {
     runDir = "eclipse"
 
 }
-
-
-
-
-/*task incrementVersionName << {
-    println(":incrementVersionName - Incrementing Version Name...")
-    def manifestFile = file("config.xml")
-    def patternVersionNumber = Pattern.compile("versionName=\"(\\d+)\\.(\\d+)\\.(\\d+)\"")
-    def manifestText = manifestFile.getText()
-    def matcherVersionNumber = patternVersionNumber.matcher(manifestText)
-    matcherVersionNumber.find()
-    def majorVersion = Integer.parseInt(matcherVersionNumber.group(1))
-    def minorVersion = Integer.parseInt(matcherVersionNumber.group(2))
-    def pointVersion = Integer.parseInt(matcherVersionNumber.group(3))
-    def mVersionName = majorVersion + "." + minorVersion + "." + pointVersion
-    def mNextVersionName = majorVersion + "." + minorVersion + "." + (pointVersion + 1)
-    def manifestContent = matcherVersionNumber.replaceAll("versionName=\"" + mNextVersionName + "\"")
-    println(":incrementVersionName - current versionName=" + mVersionName);
-    println(":incrementVersionName - new versionName=" + mNextVersionName);
-    manifestFile.write(manifestContent)
-}*/
 
 task incrementPatch << {
     String oldVersion

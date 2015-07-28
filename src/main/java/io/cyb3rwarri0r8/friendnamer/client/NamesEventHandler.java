@@ -20,7 +20,11 @@ import cpw.mods.fml.common.gameevent.PlayerEvent;
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 public class NamesEventHandler {
-    public void onEvent(PlayerEvent event){
-
+    public void onEvent(net.minecraftforge.event.entity.player.PlayerEvent.NameFormat event){
+        for (int i = 0; i < ConfigHandler.usernames.length; i++){
+            if (event.username == ConfigHandler.usernames[i]){
+                event.displayname = ConfigHandler.nicknames[i];
+            }
+        }
     }
 }
