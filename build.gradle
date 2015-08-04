@@ -299,7 +299,7 @@ processResources
                 def minor = Integer.parseInt(matcherVersion.group(2))
                 def patch = Integer.parseInt(matcherVersion.group(3))
 
-                project.versionversion = major + "." + minor + "." + patch
+                project.version = major + "." + minor + "." + patch
 
             }
 
