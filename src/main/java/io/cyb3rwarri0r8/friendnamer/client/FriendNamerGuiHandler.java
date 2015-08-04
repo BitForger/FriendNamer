@@ -1,8 +1,9 @@
 package io.cyb3rwarri0r8.friendnamer.client;
 
-import cpw.mods.fml.common.network.IGuiHandler;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.common.network.IGuiHandler;
 
 /**
  * FriendNamer - A Minecraft Modification
@@ -21,7 +22,7 @@ import net.minecraft.world.World;
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-public class FriendNamerGuiHandler implements IGuiHandler{
+public class FriendNamerGuiHandler implements IGuiHandler {
 
     /**
      * Returns a Server side Container to be displayed to the user.

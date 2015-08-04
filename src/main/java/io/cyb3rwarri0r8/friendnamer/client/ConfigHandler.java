@@ -1,9 +1,10 @@
 package io.cyb3rwarri0r8.friendnamer.client;
 
-import cpw.mods.fml.client.event.ConfigChangedEvent;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+
 import io.cyb3rwarri0r8.friendnamer.lib.Strings;
 import net.minecraftforge.common.config.Configuration;
+import net.minecraftforge.fml.client.event.ConfigChangedEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.io.File;
 

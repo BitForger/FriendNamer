@@ -1,7 +1,6 @@
 package io.cyb3rwarri0r8.friendnamer.lib;
 
-import cpw.mods.fml.common.network.NetworkRegistry;
-import io.cyb3rwarri0r8.friendnamer.FriendNamer;
+
 
 /**
  * FriendNamer - A Minecraft Modification

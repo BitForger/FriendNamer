@@ -1,6 +1,6 @@
 package io.cyb3rwarri0r8.friendnamer.client;
 
-import cpw.mods.fml.common.gameevent.PlayerEvent;
+
 
 /**
  * FriendNamer - A Minecraft Modification

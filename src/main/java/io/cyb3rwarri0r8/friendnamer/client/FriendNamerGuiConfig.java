@@ -1,11 +1,11 @@
 package io.cyb3rwarri0r8.friendnamer.client;
 
-import cpw.mods.fml.client.config.GuiConfig;
-import cpw.mods.fml.client.config.IConfigElement;
+
 import io.cyb3rwarri0r8.friendnamer.lib.Strings;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraftforge.common.config.ConfigElement;
 import net.minecraftforge.common.config.Configuration;
+import net.minecraftforge.fml.client.config.GuiConfig;
 
 import java.util.List;
 

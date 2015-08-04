@@ -20,14 +20,14 @@ buildscript {
 
 apply plugin: 'forge'
 
-version
+version=
 group= "io.cyb3rwarri0r8.friendnamer" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "friendnamer"
 
 minecraft {
-    version = "1.7.10-10.13.4.1448-1.7.10"
+    version = "1.8-11.14.3.1450"
     runDir = "eclipse"
-
+    mappings = "snapshot_20141130"
 }
 
 task incrementPatch << {
@@ -299,7 +299,7 @@ processResources
                 def minor = Integer.parseInt(matcherVersion.group(2))
                 def patch = Integer.parseInt(matcherVersion.group(3))
 
-                project.versionversion = major + "." + minor + "." + patch
+                project.version = major + "." + minor + "." + patch
 
             }
 
