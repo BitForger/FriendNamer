@@ -5,11 +5,37 @@
  R4wk, ZeuX, IngisKahn, bspkrs
  MCP Data version : unknown
 ****************************
-:setDevVersion
-:setDevVersion - Incrementing Dev Version
-:incrementPatch - Current Version: 0.0.32
-:incrementPatch - New Version:     0.0.33
+:incrementMinor
+:incrementMinor - Incrementing Minor Version ...
+:incrementMinor - Current Version: 0.0.34
+:incrementMinor - New Version:     0.1.0
+:getModData
+:getModData - Getting mod-related data from config
+:getModData - ModID:      friendNamer
+:getModData - MC-Version: 1.7.10
+:getModData - Group:      io.cyb3rwarri0r8.friendnamer
+friendNamer-1.7.10
+:compileApiJava UP-TO-DATE
+:processApiResources UP-TO-DATE
+:apiClasses UP-TO-DATE
+:sourceMainJava UP-TO-DATE
+:compileJava UP-TO-DATE
+:processResources
+:classes
+:jar
+:compileTestJava UP-TO-DATE
+:processTestResources UP-TO-DATE
+:testClasses UP-TO-DATE
+:test UP-TO-DATE
+:extractMcpData UP-TO-DATE
+:getVersionJson
+:extractUserDev UP-TO-DATE
+:genSrgs SKIPPED
+:reobf
+:assemble
+:check UP-TO-DATE
+:build
 
 BUILD SUCCESSFUL
 
-Total time: 2.0 secs
+Total time: 22.608 secs
