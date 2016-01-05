@@ -1,6 +1,7 @@
 package io.cyb3rwarri0r8.friendnamer.client;
 
 
+import net.minecraftforge.fml.common.FMLLog;
 
 /**
  * FriendNamer - A Minecraft Modification
@@ -24,6 +25,7 @@ public class NamesEventHandler {
         for (int i = 0; i < ConfigHandler.usernames.length; i++){
             if (event.username == ConfigHandler.usernames[i]){
                 event.displayname = ConfigHandler.nicknames[i];
+                FMLLog.info("Username:" + event.username + "is now:" + ConfigHandler.nicknames[i]);
             }
         }
     }
