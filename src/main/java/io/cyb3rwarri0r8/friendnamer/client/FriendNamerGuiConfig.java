@@ -6,6 +6,7 @@ import net.minecraft.client.gui.GuiScreen;
 import net.minecraftforge.common.config.ConfigElement;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.client.config.GuiConfig;
+import net.minecraftforge.fml.client.config.IConfigElement;
 
 import java.util.List;
 
@@ -47,7 +48,7 @@ public class FriendNamerGuiConfig extends GuiConfig {
                 new ConfigElement(ConfigHandler.configuration.getCategory(Configuration.CATEGORY_GENERAL)).getChildElements(),
                 Strings.MODID,
                 false,
-                false,
+                true,
                 GuiConfig.getAbridgedConfigPath(ConfigHandler.configuration.toString()));
     }
 }

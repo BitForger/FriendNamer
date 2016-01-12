@@ -3,7 +3,7 @@
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion
 
 *.iml
-eclipse/
+eclipse/*
 ## Directory-based project format:
 .idea/
 # if you remove the above rule, at least ignore the following:
@@ -46,5 +46,3 @@ atlassian-ide-plugin.xml
 com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
-
-
