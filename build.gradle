@@ -14,19 +14,19 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.0-SNAPSHOT'
     }
 }
 
-apply plugin: 'forge'
+apply plugin: 'net.minecraftforge.gradle.forge'
 
 version=
 group= "io.cyb3rwarri0r8.friendnamer" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "friendnamer"
 
 minecraft {
-    version = "1.8-11.14.3.1450"
-    runDir = "eclipse"
+    version = "1.8-11.14.4.1563"
+    runDir = "run"
     mappings = "snapshot_20141130"
 }
 
@@ -199,17 +199,18 @@ task setDevVersion << {
     if(isDev) {
         println(":setDevVersion - Incrementing Dev Version")
 
-        def pattern = Pattern.compile("<version>(\\d+)\\.(\\d+)\\.(\\d+)</version>")
+        def pattern = Pattern.compile("<version>(\\d+)\\.(\\d+)\\.(\\d+)\\.(\\d+)</version>")
         matcherVersion = pattern.matcher(configText)
         matcherVersion.find()
 
         def major = Integer.parseInt(matcherVersion.group(1))
         def minor = Integer.parseInt(matcherVersion.group(2))
         def patch = Integer.parseInt(matcherVersion.group(3))
+        def dev = Integer.parseInt(matcherVersion.group(4))
 
 
-        oldVersion = major + "." + minor + "." + patch
-        newVersion = major + "." + minor + "." + (patch + 1)
+        oldVersion = major + "." + minor + "." + patch + "." + dev
+        newVersion = major + "." + minor + "." + patch + "." + (dev + 1)
     }
     else {
         println(":setDevVersion - Setting to Dev Version")
@@ -223,7 +224,7 @@ task setDevVersion << {
         def patch = Integer.parseInt(matcherVersion.group(3))
 
         oldVersion = major + "." + minor + "." + patch
-        newVersion = major + "." + minor + "." + "1"
+        newVersion = major + "." + minor + "." + patch + "." + "1"
     }
 
     println(":incrementPatch - Current Version: " + oldVersion)
@@ -279,16 +280,17 @@ processResources
             def isDev = Boolean.parseBoolean(matcherDev.group(1))
 
             if(isDev) {
-                def pattern = Pattern.compile("<version>(\\d+)\\.(\\d+)\\.(\\d+)</version>")
+                def pattern = Pattern.compile("<version>(\\d+)\\.(\\d+)\\.(\\d+)\\.(\\d+)</version>")
                 matcherVersion = pattern.matcher(configText)
                 matcherVersion.find()
 
                 def major = Integer.parseInt(matcherVersion.group(1))
                 def minor = Integer.parseInt(matcherVersion.group(2))
                 def patch = Integer.parseInt(matcherVersion.group(3))
+                def dev = Integer.parseInt(matcherVersion.group(4))
 
 
-                project.version = major + "." + minor + "." + patch
+                project.version = major + "." + minor + "." + patch + "." + dev
             }
             else {
                 def pattern = Pattern.compile("<version>(\\d+)\\.(\\d+)\\.(\\d+)</version>")

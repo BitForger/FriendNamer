@@ -5,8 +5,35 @@
  R4wk, ZeuX, IngisKahn, bspkrs
  MCP Data version : snapshot_20141130
 ****************************
+:getModData
+:getModData - Getting mod-related data from config
+:getModData - ModID:      friendNamer
+:getModData - MC-Version: 1.7.10
+:getModData - Group:      io.cyb3rwarri0r8.friendnamer
+friendNamer-1.7.10
+:compileApiJava UP-TO-DATE
+:processApiResources UP-TO-DATE
+:apiClasses UP-TO-DATE
+:sourceMainJava
+:compileJavawarning: [options] bootstrap class path not set in conjunction with -source 1.6
+1 warning
+
 :processResources
+:classes
+:jar
+:compileTestJava UP-TO-DATE
+:processTestResources UP-TO-DATE
+:testClasses UP-TO-DATE
+:test UP-TO-DATE
+:extractMcpData UP-TO-DATE
+:getVersionJson
+:extractUserDev UP-TO-DATE
+:genSrgs SKIPPED
+:reobf
+:assemble
+:check UP-TO-DATE
+:build
 
 BUILD SUCCESSFUL
 
-Total time: 2.025 secs
+Total time: 37.66 secs
