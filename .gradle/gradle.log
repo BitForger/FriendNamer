@@ -1,52 +1,5 @@
-#################################################
-         ForgeGradle 2.0-SNAPSHOT-542909f        
-  https://github.com/MinecraftForge/ForgeGradle  
-#################################################
-               Powered by MCP 9.10               
-             http://modcoderpack.com             
-         by: Searge, ProfMobius, Fesh0r,         
-         R4wk, ZeuX, IngisKahn, bspkrs           
-#################################################
-:getModData
-:getModData - Getting mod-related data from config
-:getModData - ModID:      friendNamer
-:getModData - MC-Version: 1.8
-:getModData - Group:      io.cyb3rwarri0r8.friendnamer
-friendNamer-1.8
-:deobfCompileDummyTask
-:deobfProvidedDummyTask
-:sourceApiJava
-:compileApiJava UP-TO-DATE
-:processApiResources UP-TO-DATE
-:apiClasses UP-TO-DATE
-:sourceMainJava
-:compileJavawarning: [options] bootstrap class path not set in conjunction with -source 1.6
-1 warning
+:processResources
 
-:processResources UP-TO-DATE
-:classes
-:jar
-:sourceTestJava
-:compileTestJava UP-TO-DATE
-:processTestResources UP-TO-DATE
-:testClasses UP-TO-DATE
-:test UP-TO-DATE
-:extractMcpData SKIPPED
-:extractMcpMappings SKIPPED
-:getVersionJson
-:extractUserdev UP-TO-DATE
-:genSrgs SKIPPED
-:reobfJar FAILED
+BUILD SUCCESSFUL
 
-FAILURE: Build failed with an exception.
-
-* What went wrong:
-Execution failed for task ':reobfJar'.
-> java.util.zip.ZipException: duplicate entry: mcmod.info
-
-* Try:
-Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
-
-BUILD FAILED
-
-Total time: 15.505 secs
+Total time: 0.406 secs
