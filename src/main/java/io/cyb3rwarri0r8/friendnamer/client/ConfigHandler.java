@@ -11,6 +11,7 @@ import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import org.apache.logging.log4j.Level;
 
 import java.io.File;
 
@@ -48,7 +49,6 @@ public class ConfigHandler {
     }
 
     private static void loadConfiguration(){
-        configuration.load();
         usernames = configuration.getStringList("Usernames", Configuration.CATEGORY_GENERAL, new String[]{"Enter"," Usernames"}, "Enter the username you want to change");
         nicknames = configuration.getStringList("Nicknames", Configuration.CATEGORY_GENERAL, new String[]{"Enter the nickname", " In the same position as the above username"}, "Enter the nickname");
         if (configuration.hasChanged()){
@@ -58,10 +58,10 @@ public class ConfigHandler {
 
     @SideOnly(Side.CLIENT)
     @SubscribeEvent(priority = EventPriority.HIGH)
-    public void onConfigurationChanged(ConfigChangedEvent event){
-        FMLLog.info("Config has changed!");
+    public void onConfigurationChanged(ConfigChangedEvent.OnConfigChangedEvent event){
+        FMLLog.log(Level.DEBUG, "Config has changed!");
         if (event.modID.equalsIgnoreCase(Strings.MODID)){
-            FMLLog.warning("Reloading Configuration!");
+            FMLLog.log(Level.DEBUG, "Reloading Configuration!");
             loadConfiguration();
         }
     }

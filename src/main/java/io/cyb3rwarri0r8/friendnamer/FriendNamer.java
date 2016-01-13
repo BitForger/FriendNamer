@@ -37,7 +37,7 @@ import java.util.logging.Logger;
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@Mod(modid = Strings.MODID, name = "Friend Namer", version = Strings.VERSION, guiFactory = Strings.GUI_FACTORY_CLASS )
+@Mod(modid = Strings.MODID, name = "Friend Namer", version = Strings.VERSION, guiFactory = Strings.GUI_FACTORY_CLASS, updateJSON = "https://raw.githubusercontent.com/KaminoCoding/Update-Files/master/FriendNamer-Update.json")
 
 public class FriendNamer {
 
@@ -57,19 +57,22 @@ public class FriendNamer {
         ConfigHandler.init(configFile.getConfigFile());
 
         modMetadata = event.getModMetadata();
-        configFile.load();
+//        I don't think I need to use that
+//        configFile.load();
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event){
-        FMLLog.info("Registering Names Event Handler");
+        FMLLog.log(Level.DEBUG, "Registering Names Event Handler");
         MinecraftForge.EVENT_BUS.register(new NamesEventHandler());
-        FMLLog.info("Registering Config Handler Update Method");
+        FMLCommonHandler.instance().bus().register(new NamesEventHandler());
+        FMLLog.log(Level.DEBUG, "Registering Config Handler Update Method");
         MinecraftForge.EVENT_BUS.register(new ConfigHandler());
+        FMLCommonHandler.instance().bus().register(new ConfigHandler());
     }
 
     @Mod.EventHandler
     public void postinit(FMLPostInitializationEvent event){
-        FMLLog.log(Level.INFO, event.getModState().toString());
+        FMLLog.log(Level.DEBUG, event.getModState().toString());
     }
 }

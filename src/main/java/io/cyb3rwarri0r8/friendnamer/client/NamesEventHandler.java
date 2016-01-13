@@ -7,6 +7,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import org.apache.logging.log4j.Level;
 
 /**
  * FriendNamer - A Minecraft Modification
@@ -30,11 +31,11 @@ public class NamesEventHandler {
     @SideOnly(Side.CLIENT)
     @SubscribeEvent(priority = EventPriority.HIGH, receiveCanceled = true)
     public void onEvent(net.minecraftforge.event.entity.player.PlayerEvent.NameFormat event){
-        FMLLog.info("Firing PlayerEvent.NameFormat event");
+        FMLLog.log(Level.DEBUG, "Firing PlayerEvent.NameFormat event");
         for (int i = 0; i < ConfigHandler.usernames.length; i++){
             if (event.displayname.equalsIgnoreCase(ConfigHandler.usernames[i])){
                 event.displayname = ConfigHandler.nicknames[i];
-                FMLLog.info("Username:" + event.username + "is now:" + ConfigHandler.nicknames[i]);
+                FMLLog.info("Username:" + event.username + " is now: " + ConfigHandler.nicknames[i]);
             }
         }
     }
