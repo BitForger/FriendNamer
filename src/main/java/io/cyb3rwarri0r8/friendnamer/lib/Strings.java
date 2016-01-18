@@ -1,6 +1,5 @@
 package io.cyb3rwarri0r8.friendnamer.lib;
 
-import io.cyb3rwarri0r8.friendnamer.FriendNamer;
 
 /**
  * FriendNamer - A Minecraft Modification
@@ -20,7 +19,7 @@ import io.cyb3rwarri0r8.friendnamer.FriendNamer;
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 public class Strings {
-    public static final String MODID = "friendNamer";
-    public static final String VERSION = "0.0.0";
+    public static final String MODID = "friendnamer";
+    public static final String VERSION = "0.2.1.45";
     public static final String GUI_FACTORY_CLASS = "io.cyb3rwarri0r8.friendnamer.client.FriendNamerGuiFactory";
 }

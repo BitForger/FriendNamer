@@ -4,4 +4,3 @@ machine:
 general:
     artifacts:
         - "build/libs"
-        
