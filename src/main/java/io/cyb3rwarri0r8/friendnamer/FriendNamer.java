@@ -37,7 +37,7 @@ import java.util.logging.Logger;
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@Mod(modid = Strings.MODID, name = "Friend Namer", version = Strings.VERSION, guiFactory = Strings.GUI_FACTORY_CLASS, updateJSON = "https://raw.githubusercontent.com/KaminoCoding/Update-Files/master/FriendNamer-Update.json")
+@Mod(modid = Strings.MODID, version = Strings.VERSION, useMetadata = true, guiFactory = Strings.GUI_FACTORY_CLASS, updateJSON = "https://raw.githubusercontent.com/KaminoCoding/Update-Files/master/FriendNamer-Update.json")
 
 public class FriendNamer {
 
@@ -57,6 +57,8 @@ public class FriendNamer {
         ConfigHandler.init(configFile.getConfigFile());
 
         modMetadata = event.getModMetadata();
+//        modMetadata.version = Strings.VERSION;
+        modMetadata.updateJSON = "https://raw.githubusercontent.com/KaminoCoding/Update-Files/master/FriendNamer-Update.json";
 //        I don't think I need to use that
 //        configFile.load();
     }

@@ -3,7 +3,6 @@
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion
 
 *.iml
-eclipse/*
 ## Directory-based project format:
 .idea/
 # if you remove the above rule, at least ignore the following:
@@ -31,10 +30,12 @@ eclipse/*
 *.ipr
 *.iws
 
+
 ## Plugin-specific files:
 
 # IntelliJ
-/out/
+/run/
+/build/
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
@@ -46,3 +47,5 @@ atlassian-ide-plugin.xml
 com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
+
+*.txt
