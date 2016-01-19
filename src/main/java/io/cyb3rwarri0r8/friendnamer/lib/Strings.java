@@ -20,6 +20,6 @@ package io.cyb3rwarri0r8.friendnamer.lib;
  */
 public class Strings {
     public static final String MODID = "friendnamer";
-    public static final String VERSION = "0.2.1.45";
+    public static final String VERSION = "0.3.0";
     public static final String GUI_FACTORY_CLASS = "io.cyb3rwarri0r8.friendnamer.client.FriendNamerGuiFactory";
 }
