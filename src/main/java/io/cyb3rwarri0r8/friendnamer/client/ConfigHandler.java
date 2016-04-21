@@ -33,11 +33,11 @@ import java.io.File;
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 public class ConfigHandler {
-    public static Configuration configuration;
+    static Configuration configuration;
 
-    public static String[] usernames;
+    static String[] usernames;
 
-    public static String[] nicknames;
+    static String[] nicknames;
 
 
 

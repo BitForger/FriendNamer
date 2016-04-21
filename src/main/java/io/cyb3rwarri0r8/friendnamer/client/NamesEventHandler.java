@@ -4,7 +4,6 @@ package io.cyb3rwarri0r8.friendnamer.client;
 import net.minecraftforge.fml.common.FMLLog;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.gameevent.PlayerEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import org.apache.logging.log4j.Level;
@@ -35,7 +34,7 @@ public class NamesEventHandler {
         for (int i = 0; i < ConfigHandler.usernames.length; i++){
             if (event.displayname.equalsIgnoreCase(ConfigHandler.usernames[i])){
                 event.displayname = ConfigHandler.nicknames[i];
-                FMLLog.info("Username:" + event.username + " is now: " + ConfigHandler.nicknames[i]);
+                FMLLog.info("Username: " + event.username + " is now: " + ConfigHandler.nicknames[i]);
             }
         }
     }
