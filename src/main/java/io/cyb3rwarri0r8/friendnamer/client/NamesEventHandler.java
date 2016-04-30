@@ -4,6 +4,7 @@ package io.cyb3rwarri0r8.friendnamer.client;
 import net.minecraftforge.fml.common.FMLLog;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.gameevent.PlayerEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import org.apache.logging.log4j.Level;
@@ -37,5 +38,11 @@ public class NamesEventHandler {
                 FMLLog.info("Username: " + event.username + " is now: " + ConfigHandler.nicknames[i]);
             }
         }
+    }
+
+    @SideOnly( Side.CLIENT )
+    @SubscribeEvent
+    public void onPlayerLoggedIn( PlayerEvent.PlayerLoggedInEvent e ) {
+
     }
 }

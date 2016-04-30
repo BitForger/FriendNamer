@@ -26,6 +26,11 @@
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
   </component>
+  <component name="ExportableFileTemplateSettings">
+    <default_templates>
+      <template name="JSON Mod Blockstates.json" reformat="true" live-template-enabled="true" />
+    </default_templates>
+  </component>
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>

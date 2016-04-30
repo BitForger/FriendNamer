@@ -1,15 +1,4 @@
 package io.cyb3rwarri0r8.friendnamer.client;
-
-
-import io.cyb3rwarri0r8.friendnamer.lib.Strings;
-import net.minecraft.client.gui.GuiScreen;
-import net.minecraftforge.common.config.ConfigElement;
-import net.minecraftforge.common.config.Configuration;
-import net.minecraftforge.fml.client.config.GuiConfig;
-import net.minecraftforge.fml.client.config.IConfigElement;
-
-import java.util.List;
-
 /**
  * FriendNamer - A Minecraft Modification
  * Copyright (C) 2015 Cyb3rWarri0r8
@@ -27,6 +16,22 @@ import java.util.List;
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+
+import io.cyb3rwarri0r8.friendnamer.lib.Strings;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiIngame;
+import net.minecraft.client.gui.GuiScreen;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.config.ConfigElement;
+import net.minecraftforge.common.config.Configuration;
+import net.minecraftforge.event.entity.EntityJoinWorldEvent;
+import net.minecraftforge.fml.client.GuiIngameModOptions;
+import net.minecraftforge.fml.client.config.GuiConfig;
+import net.minecraftforge.fml.common.FMLLog;
+import net.minecraftforge.fml.common.gameevent.PlayerEvent;
+
+
 public class FriendNamerGuiConfig extends GuiConfig {
     /**
      * GuiConfig constructor that will use ConfigChangedEvent when editing is concluded. If a non-null value is passed for configID,
@@ -44,11 +49,12 @@ public class FriendNamerGuiConfig extends GuiConfig {
      * @param title                  the desired title for this screen. For consistency it is recommended that you pass the path of the config file being
      */
     public FriendNamerGuiConfig(GuiScreen parentScreen) {
-        super(parentScreen,
-                new ConfigElement(ConfigHandler.configuration.getCategory(Configuration.CATEGORY_GENERAL)).getChildElements(),
-                Strings.MODID,
-                false,
-                true,
-                GuiConfig.getAbridgedConfigPath(ConfigHandler.configuration.toString()));
+	    super( parentScreen,
+			    new ConfigElement( ConfigHandler.configuration.getCategory( Configuration.CATEGORY_GENERAL ) ).getChildElements(),
+			    Strings.MODID,
+			    false,
+			    false,
+			    GuiConfig.getAbridgedConfigPath( ConfigHandler.configuration.toString() ) );
     }
+
 }
