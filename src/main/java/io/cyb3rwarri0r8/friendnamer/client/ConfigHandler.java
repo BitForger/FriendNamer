@@ -4,8 +4,10 @@ package io.cyb3rwarri0r8.friendnamer.client;
 import io.cyb3rwarri0r8.friendnamer.lib.Strings;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.client.event.GuiOpenEvent;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
-import net.minecraftforge.event.ForgeEventFactory;
+import net.minecraftforge.event.entity.EntityJoinWorldEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.fml.client.GuiIngameModOptions;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.FMLLog;
@@ -41,7 +43,7 @@ public class ConfigHandler {
 
 	static String[] nicknames;
 
-	public Minecraft mc;
+	private Minecraft mc = Minecraft.getMinecraft();
 
 	public static void init( File configFile ) {
 		if ( configuration == null ) {
@@ -66,10 +68,16 @@ public class ConfigHandler {
 			FMLLog.log( Level.DEBUG, "Reloading Configuration!" );
 			loadConfiguration();
 		}
-		if ( event.modID.equalsIgnoreCase( Strings.MODID ) && mc.isGamePaused() ) {
-			String name = ForgeEventFactory.getPlayerDisplayName( mc.thePlayer, mc.thePlayer.getName() );
+		if ( mc.isGamePaused() ) {
+//			ForgeEventFactory.getPlayerDisplayName( mc.thePlayer, mc.thePlayer.getName() );
+			FMLLog.log( Level.WARN, "Attempting to fire name format event" );
+			boolean didRun = MinecraftForge.EVENT_BUS.post( new PlayerEvent.NameFormat( mc.thePlayer, mc.thePlayer.getName() ) );
+			boolean didRun2 = MinecraftForge.EVENT_BUS.post( new EntityJoinWorldEvent( mc.thePlayer, mc.theWorld ) );
+			FMLLog.log( Level.INFO, didRun + " : " + didRun2 );
+
 		}
 	}
+
 
 	@SideOnly( Side.CLIENT )
 	@SubscribeEvent( priority = EventPriority.NORMAL, receiveCanceled = true )

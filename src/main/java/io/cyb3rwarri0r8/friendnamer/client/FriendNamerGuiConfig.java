@@ -57,4 +57,8 @@ public class FriendNamerGuiConfig extends GuiConfig {
 			    GuiConfig.getAbridgedConfigPath( ConfigHandler.configuration.toString() ) );
     }
 
+	@Override
+	public void onGuiClosed() {
+
+	}
 }

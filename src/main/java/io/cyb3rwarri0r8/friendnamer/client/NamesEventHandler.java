@@ -27,22 +27,22 @@ import org.apache.logging.log4j.Level;
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 public class NamesEventHandler {
-//    public static net.minecraftforge.event.entity.player.PlayerEvent.NameFormat nameFormat;
-    @SideOnly(Side.CLIENT)
-    @SubscribeEvent(priority = EventPriority.HIGH, receiveCanceled = true)
-    public void onEvent(net.minecraftforge.event.entity.player.PlayerEvent.NameFormat event){
-        FMLLog.log(Level.DEBUG, "Firing PlayerEvent.NameFormat event");
-        for (int i = 0; i < ConfigHandler.usernames.length; i++){
-            if (event.displayname.equalsIgnoreCase(ConfigHandler.usernames[i])){
-                event.displayname = ConfigHandler.nicknames[i];
-                FMLLog.info("Username: " + event.username + " is now: " + ConfigHandler.nicknames[i]);
-            }
-        }
-    }
+	//    public static net.minecraftforge.event.entity.player.PlayerEvent.NameFormat nameFormat;
+	@SideOnly( Side.CLIENT )
+	@SubscribeEvent( priority = EventPriority.HIGH )
+	public void onEvent( net.minecraftforge.event.entity.player.PlayerEvent.NameFormat event ) {
+		FMLLog.log( Level.DEBUG, "Firing PlayerEvent.NameFormat event" );
+		for ( int i = 0; i < ConfigHandler.usernames.length; i++ ) {
+			if ( event.displayname.equalsIgnoreCase( ConfigHandler.usernames[i] ) ) {
+				event.displayname = ConfigHandler.nicknames[i];
+				FMLLog.info( "Username: " + event.username + " is now: " + ConfigHandler.nicknames[i] );
+			}
+		}
+	}
 
-    @SideOnly( Side.CLIENT )
-    @SubscribeEvent
-    public void onPlayerLoggedIn( PlayerEvent.PlayerLoggedInEvent e ) {
+	@SideOnly( Side.CLIENT )
+	@SubscribeEvent
+	public void onPlayerLoggedIn( PlayerEvent.PlayerLoggedInEvent e ) {
 
-    }
+	}
 }
