@@ -28,6 +28,9 @@ import org.apache.logging.log4j.Level;
  */
 public class NamesEventHandler {
 	//    public static net.minecraftforge.event.entity.player.PlayerEvent.NameFormat nameFormat;
+
+
+
 	@SideOnly( Side.CLIENT )
 	@SubscribeEvent( priority = EventPriority.HIGH )
 	public void onEvent( net.minecraftforge.event.entity.player.PlayerEvent.NameFormat event ) {

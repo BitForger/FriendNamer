@@ -29,7 +29,9 @@ import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.fml.client.GuiIngameModOptions;
 import net.minecraftforge.fml.client.config.GuiConfig;
 import net.minecraftforge.fml.common.FMLLog;
+import net.minecraftforge.fml.common.eventhandler.Event;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent;
+import org.apache.logging.log4j.Level;
 
 
 public class FriendNamerGuiConfig extends GuiConfig {
@@ -57,8 +59,12 @@ public class FriendNamerGuiConfig extends GuiConfig {
 			    GuiConfig.getAbridgedConfigPath( ConfigHandler.configuration.toString() ) );
     }
 
+	private EntityPlayer player = this.mc.thePlayer;
+
 	@Override
 	public void onGuiClosed() {
-
+		if (this.parentScreen == null){
+			player.refreshDisplayName();
+		}
 	}
 }
