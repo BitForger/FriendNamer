@@ -4,15 +4,12 @@ package io.cyb3rwarri0r8.friendnamer.client;
 import io.cyb3rwarri0r8.friendnamer.lib.Strings;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraftforge.client.event.GuiOpenEvent;
 import net.minecraftforge.common.config.Configuration;
-import net.minecraftforge.fml.client.GuiIngameModOptions;
+import net.minecraftforge.fml.client.GuiModList;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.FMLLog;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 import org.apache.logging.log4j.Level;
 
 import java.io.File;
@@ -60,7 +57,7 @@ public class ConfigHandler {
 		}
 	}
 
-	@SideOnly( Side.CLIENT )
+
 	@SubscribeEvent( priority = EventPriority.HIGH )
 	public void onConfigurationChanged( ConfigChangedEvent.OnConfigChangedEvent event ) {
 		FMLLog.log( Level.DEBUG, "Config has changed!" );
@@ -69,21 +66,22 @@ public class ConfigHandler {
 			loadConfiguration();
 		}
 		FMLLog.log( Level.INFO, mc.currentScreen.toString() );
-		if ( this.mc.currentScreen instanceof GuiIngameModOptions ) {
+		if ( this.mc.currentScreen instanceof GuiModList ) {
 //			ForgeEventFactory.getPlayerDisplayName( mc.thePlayer, mc.thePlayer.getName() );
 			FMLLog.log( Level.WARN, "Attempting to fire name format event" );
+			player.refreshDisplayName();
 		}
 	}
 
 
-	@SideOnly( Side.CLIENT )
-	@SubscribeEvent( priority = EventPriority.NORMAL, receiveCanceled = true )
-	public void onEvent( GuiOpenEvent event ) {
-		if ( event.gui instanceof GuiIngameModOptions ) {
-			System.out.println( "GuiOpenEvent for GuiIngameModOptions" );
-			event.gui = new FriendNamerGuiConfig( null );
-		}
-	}
+
+//	@SubscribeEvent( priority = EventPriority.NORMAL, receiveCanceled = true )
+//	public void onEvent( GuiOpenEvent event ) {
+//		if ( event.gui instanceof  ) {
+//			System.out.println( "GuiOpenEvent for GuiIngameModOptions" );
+//			event.gui = new FriendNamerGuiConfig( null );
+//		}
+//	}
 
 
 

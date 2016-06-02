@@ -5,8 +5,6 @@ import net.minecraftforge.fml.common.FMLLog;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 import org.apache.logging.log4j.Level;
 
 /**
@@ -31,7 +29,7 @@ public class NamesEventHandler {
 
 
 
-	@SideOnly( Side.CLIENT )
+
 	@SubscribeEvent( priority = EventPriority.HIGH )
 	public void onEvent( net.minecraftforge.event.entity.player.PlayerEvent.NameFormat event ) {
 		FMLLog.log( Level.DEBUG, "Firing PlayerEvent.NameFormat event" );
@@ -43,7 +41,7 @@ public class NamesEventHandler {
 		}
 	}
 
-	@SideOnly( Side.CLIENT )
+
 	@SubscribeEvent
 	public void onPlayerLoggedIn( PlayerEvent.PlayerLoggedInEvent e ) {
 

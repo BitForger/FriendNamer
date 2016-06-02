@@ -20,13 +20,13 @@ package io.cyb3rwarri0r8.friendnamer.client;
 import io.cyb3rwarri0r8.friendnamer.lib.Strings;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiIngame;
+import net.minecraft.client.gui.GuiIngameMenu;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.ConfigElement;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
-import net.minecraftforge.fml.client.GuiIngameModOptions;
 import net.minecraftforge.fml.client.config.GuiConfig;
 import net.minecraftforge.fml.common.FMLLog;
 import net.minecraftforge.fml.common.eventhandler.Event;
@@ -63,7 +63,8 @@ public class FriendNamerGuiConfig extends GuiConfig {
 
 	@Override
 	public void onGuiClosed() {
-		if (this.parentScreen == null){
+		if (this.mc.currentScreen instanceof GuiIngameMenu){
+			FMLLog.log( Level.INFO, "Firing player#refreshDisplayName" );
 			player.refreshDisplayName();
 		}
 	}

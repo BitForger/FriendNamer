@@ -7,7 +7,6 @@ import io.cyb3rwarri0r8.friendnamer.lib.CommonProxy;
 import io.cyb3rwarri0r8.friendnamer.lib.Strings;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
-import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.FMLLog;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.ModMetadata;
@@ -34,7 +33,7 @@ import org.apache.logging.log4j.Level;
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-@Mod(modid = Strings.MODID, /*version = Strings.VERSION,*/ useMetadata = true, guiFactory = Strings.GUI_FACTORY_CLASS, updateJSON = "https://raw.githubusercontent.com/KaminoCoding/Update-Files/master/FriendNamer-Update.json")
+@Mod(modid = Strings.MODID, clientSideOnly = true, /*version = Strings.VERSION,*/ useMetadata = true, guiFactory = Strings.GUI_FACTORY_CLASS, updateJSON = "https://raw.githubusercontent.com/KaminoCoding/Update-Files/master/FriendNamer-Update.json")
 
 public class FriendNamer {
 
@@ -60,10 +59,10 @@ public class FriendNamer {
     public void init(FMLInitializationEvent event){
         FMLLog.log(Level.DEBUG, "Registering Names Event Handler");
         MinecraftForge.EVENT_BUS.register(new NamesEventHandler());
-        FMLCommonHandler.instance().bus().register(new NamesEventHandler());
+
         FMLLog.log(Level.DEBUG, "Registering Config Handler Update Method");
         MinecraftForge.EVENT_BUS.register(new ConfigHandler());
-        FMLCommonHandler.instance().bus().register(new ConfigHandler());
+
     }
 
     @Mod.EventHandler

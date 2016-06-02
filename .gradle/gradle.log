@@ -1,55 +1,21 @@
+This mapping 'stable_20' was designed for MC 1.8.8! Use at your own peril.This mapping 'stable_20' was designed for MC 1.8.8! Use at your own peril.
+
 #################################################
-         ForgeGradle 2.0-SNAPSHOT-30739b0        
+         ForgeGradle 2.1-SNAPSHOT-da90449        
   https://github.com/MinecraftForge/ForgeGradle  
 #################################################
-               Powered by MCP 9.10               
+               Powered by MCP unknown               
              http://modcoderpack.com             
          by: Searge, ProfMobius, Fesh0r,         
          R4wk, ZeuX, IngisKahn, bspkrs           
 #################################################
-:setDevVersion
-:setDevVersion - Incrementing Dev Version
-:incrementPatch - Current Version: 0.3.0.45
-:incrementPatch - New Version:     0.3.0.46
-:processResources
-:getModData
-:getModData - Getting mod-related data from config
-:getModData - ModID:      friendNamer
-:getModData - MC-Version: 1.8
-:getModData - Group:      io.cyb3rwarri0r8.friendnamer
-friendNamer
 :deobfCompileDummyTask
 :deobfProvidedDummyTask
-:sourceApiJava
-:compileApiJava UP-TO-DATE
-:processApiResources UP-TO-DATE
-:apiClasses UP-TO-DATE
-:sourceMainJava
-:compileJavawarning: [options] bootstrap class path not set in conjunction with -source 1.6
-1 warning
-
-:classes
-:jar
-:sourceTestJava
-:compileTestJava UP-TO-DATE
-:processTestResources UP-TO-DATE
-:testClasses UP-TO-DATE
-:test UP-TO-DATE
-:extractMcpData SKIPPED
-:extractMcpMappings SKIPPED
-:getVersionJson
-:extractUserdev UP-TO-DATE
-:genSrgs SKIPPED
-:reobfJar
-:extractRangemapReplacedMain
-/Users/noahk/Desktop/Modding/FriendNamer/build/sources/main/java
-:retromapReplacedMain
-remapping source...
-:sourceJar
-:assemble
-:check UP-TO-DATE
-:build
+:ideaModule
+:ideaProject
+:ideaWorkspace
+:idea
 
 BUILD SUCCESSFUL
 
-Total time: 21.828 secs
+Total time: 24.356 secs
