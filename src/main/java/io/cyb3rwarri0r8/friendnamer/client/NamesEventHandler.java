@@ -57,9 +57,9 @@ public class NamesEventHandler {
 		// Test log
 		FMLLog.log( Level.INFO, text + " : " + type);
 		// Make the pattern
-		Pattern pattern = Pattern.compile( "/<([\\w+\\d+])>/g" );
+		Pattern pattern = Pattern.compile( "/<(\\w+)>/g" );
 		// Match the pattern
-		Matcher matcher = pattern.matcher( chatReceivedEvent.message.getFormattedText() );
+		Matcher matcher = pattern.matcher( text );
 		matcher.find();
 		// Log it FIXME it always comes out false.. why?
 		FMLLog.log( Level.INFO, "Does match: " + matcher.find() + "." + " Text is: " + matcher.group( 1 ) );
