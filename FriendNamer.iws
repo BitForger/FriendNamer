@@ -2,20 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="946fe434-4775-4b46-afa5-b0bdbb8e6755" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.7/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.7/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.7/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.7/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.7/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.7/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.7/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.7/taskArtifacts/outputFileStates.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.7/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.7/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FriendNamer/io/cyb3rwarri0r8/friendnamer/FriendNamer.class" afterPath="$PROJECT_DIR$/out/production/FriendNamer/io/cyb3rwarri0r8/friendnamer/FriendNamer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FriendNamer/io/cyb3rwarri0r8/friendnamer/client/ConfigHandler.class" afterPath="$PROJECT_DIR$/out/production/FriendNamer/io/cyb3rwarri0r8/friendnamer/client/ConfigHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FriendNamer/io/cyb3rwarri0r8/friendnamer/client/FriendNamerGuiConfig.class" afterPath="$PROJECT_DIR$/out/production/FriendNamer/io/cyb3rwarri0r8/friendnamer/client/FriendNamerGuiConfig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FriendNamer/io/cyb3rwarri0r8/friendnamer/client/FriendNamerGuiFactory.class" afterPath="$PROJECT_DIR$/out/production/FriendNamer/io/cyb3rwarri0r8/friendnamer/client/FriendNamerGuiFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FriendNamer/io/cyb3rwarri0r8/friendnamer/client/FriendNamerGuiHandler.class" afterPath="$PROJECT_DIR$/out/production/FriendNamer/io/cyb3rwarri0r8/friendnamer/client/FriendNamerGuiHandler.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FriendNamer/io/cyb3rwarri0r8/friendnamer/client/NamesEventHandler.class" afterPath="$PROJECT_DIR$/out/production/FriendNamer/io/cyb3rwarri0r8/friendnamer/client/NamesEventHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/gradle.log" afterPath="$PROJECT_DIR$/.gradle/gradle.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FriendNamer/io/cyb3rwarri0r8/friendnamer/lib/ClientProxy.class" afterPath="$PROJECT_DIR$/out/production/FriendNamer/io/cyb3rwarri0r8/friendnamer/lib/ClientProxy.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FriendNamer/io/cyb3rwarri0r8/friendnamer/lib/CommonProxy.class" afterPath="$PROJECT_DIR$/out/production/FriendNamer/io/cyb3rwarri0r8/friendnamer/lib/CommonProxy.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FriendNamer/io/cyb3rwarri0r8/friendnamer/lib/Strings.class" afterPath="$PROJECT_DIR$/out/production/FriendNamer/io/cyb3rwarri0r8/friendnamer/lib/Strings.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FriendNamer.ipr" afterPath="$PROJECT_DIR$/FriendNamer.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FriendNamer.iws" afterPath="$PROJECT_DIR$/FriendNamer.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/cyb3rwarri0r8/friendnamer/FriendNamer.java" afterPath="$PROJECT_DIR$/src/main/java/io/cyb3rwarri0r8/friendnamer/FriendNamer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/cyb3rwarri0r8/friendnamer/client/ConfigHandler.java" afterPath="$PROJECT_DIR$/src/main/java/io/cyb3rwarri0r8/friendnamer/client/ConfigHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/cyb3rwarri0r8/friendnamer/client/FriendNamerGuiConfig.java" afterPath="$PROJECT_DIR$/src/main/java/io/cyb3rwarri0r8/friendnamer/client/FriendNamerGuiConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/cyb3rwarri0r8/friendnamer/client/NamesEventHandler.java" afterPath="$PROJECT_DIR$/src/main/java/io/cyb3rwarri0r8/friendnamer/client/NamesEventHandler.java" />
     </list>
@@ -158,28 +155,40 @@
       <file leaf-file-name="FriendNamer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/cyb3rwarri0r8/friendnamer/FriendNamer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
+            <state relative-caret-position="437">
               <caret line="35" column="51" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FriendNamerGuiConfig.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FriendNamerGuiConfig.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/cyb3rwarri0r8/friendnamer/client/FriendNamerGuiConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="66" column="73" selection-start-line="66" selection-start-column="73" selection-end-line="66" selection-end-column="73" />
+            <state relative-caret-position="1007">
+              <caret line="67" column="36" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NamesEventHandler.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="NamesEventHandler.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/cyb3rwarri0r8/friendnamer/client/NamesEventHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+            <state relative-caret-position="400">
+              <caret line="64" column="89" selection-start-line="64" selection-start-column="89" selection-end-line="64" selection-end-column="89" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="798">
+              <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -188,10 +197,10 @@
       <file leaf-file-name="ConfigHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/cyb3rwarri0r8/friendnamer/client/ConfigHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="83" column="5" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+            <state relative-caret-position="779">
+              <caret line="68" column="51" selection-start-line="68" selection-start-column="51" selection-end-line="68" selection-end-column="51" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="docComment;class#ConfigHandler#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -779,13 +788,15 @@
         <option value="$PROJECT_DIR$/src/main/resources/mcmod.info" />
         <option value="$PROJECT_DIR$/src/main/java/io/cyb3rwarri0r8/friendnamer/lib/Strings.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/cyb3rwarri0r8/friendnamer/FriendNamer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/io/cyb3rwarri0r8/friendnamer/client/NamesEventHandler.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.8.9-11.15.1.1722/stable/20/forgeSrc-1.8.9-11.15.1.1722-sources.jar!/net/minecraftforge/client/GuiIngameForge.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/cyb3rwarri0r8/friendnamer/client/ConfigHandler.java" />
         <option value="$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.8.9-11.15.1.1722/stable/20/forgeSrc-1.8.9-11.15.1.1722-sources.jar!/net/minecraft/entity/player/EntityPlayer.java" />
         <option value="$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.8.9-11.15.1.1722/stable/20/forgeSrc-1.8.9-11.15.1.1722-sources.jar!/net/minecraftforge/event/ForgeEventFactory.java" />
+        <option value="$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.8.9-11.15.1.1722/stable/20/forgeSrc-1.8.9-11.15.1.1722-sources.jar!/net/minecraft/util/IChatComponent.java" />
+        <option value="$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.8.9-11.15.1.1722/stable/20/forgeSrc-1.8.9-11.15.1.1722-sources.jar!/net/minecraft/util/ChatComponentText.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/cyb3rwarri0r8/friendnamer/client/FriendNamerGuiConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/cyb3rwarri0r8/friendnamer/client/NamesEventHandler.java" />
       </list>
     </option>
   </component>
@@ -795,8 +806,8 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1920" />
-    <option name="height" value="1053" />
+    <option name="width" value="1440" />
+    <option name="height" value="873" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -973,6 +984,20 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FriendNamer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FriendNamer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Problems" />
         <subPane subId="Production">
@@ -994,20 +1019,6 @@
         <subPane subId="Tests" />
       </pane>
       <pane id="Scratches" />
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FriendNamer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FriendNamer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1017,9 +1028,9 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.spelling" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -1481,22 +1492,22 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1053" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="873" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882413" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3277849" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31879544" sideWeight="0.5042598" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31737775" sideWeight="0.49574015" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3149808" sideWeight="0.49574015" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17678382" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13090129" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328541" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1559,48 +1570,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/cyb3rwarri0r8/friendnamer/FriendNamer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/cyb3rwarri0r8/friendnamer/client/FriendNamerGuiConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="45" column="7" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/cyb3rwarri0r8/friendnamer/client/NamesEventHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/cyb3rwarri0r8/friendnamer/client/ConfigHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/cyb3rwarri0r8/friendnamer/FriendNamer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="61" column="22" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/cyb3rwarri0r8/friendnamer/client/FriendNamerGuiConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
@@ -1613,7 +1582,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1622,7 +1593,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#ConfigHandler#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1773,17 +1744,9 @@
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.8-11.14.4.1563/snapshot/20141130/forgeSrc-1.8-11.14.4.1563-sources.jar!/net/minecraftforge/fml/common/eventhandler/EventBus.java" />
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/cyb3rwarri0r8/friendnamer/FriendNamer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
+        <state relative-caret-position="437">
           <caret line="35" column="51" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
           <folding />
         </state>
@@ -1793,7 +1756,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1801,25 +1763,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1634">
           <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/cyb3rwarri0r8/friendnamer/client/NamesEventHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/cyb3rwarri0r8/friendnamer/client/ConfigHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="83" column="5" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1827,7 +1770,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
           <caret line="178" column="25" selection-start-line="178" selection-start-column="25" selection-end-line="178" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1835,15 +1777,82 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="2683" column="82" selection-start-line="2683" selection-start-column="82" selection-end-line="2683" selection-end-column="82" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.8.9-11.15.1.1722/stable/20/forgeSrc-1.8.9-11.15.1.1722-sources.jar!/net/minecraft/util/IChatComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="44" column="19" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.8.9-11.15.1.1722/stable/20/forgeSrc-1.8.9-11.15.1.1722-sources.jar!/net/minecraft/util/ChatComponentText.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-95">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/ext/nashorn.jar!/jdk/nashorn/internal/runtime/regexp/joni/Regex.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="61" column="11" selection-start-line="61" selection-start-column="11" selection-end-line="61" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/util/regex/Pattern.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="1026" column="26" selection-start-line="1026" selection-start-column="26" selection-end-line="1026" selection-end-column="26" />
+          <folding>
+            <element signature="e#48487#48488#0" expanded="false" />
+            <element signature="e#48531#48532#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/cyb3rwarri0r8/friendnamer/client/ConfigHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="68" column="51" selection-start-line="68" selection-start-column="51" selection-end-line="68" selection-end-column="51" />
+          <folding>
+            <element signature="docComment;class#ConfigHandler#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/cyb3rwarri0r8/friendnamer/client/FriendNamerGuiConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="66" column="73" selection-start-line="66" selection-start-column="73" selection-end-line="66" selection-end-column="73" />
+        <state relative-caret-position="1007">
+          <caret line="67" column="36" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/util/regex/Matcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="621" column="19" selection-start-line="621" selection-start-column="19" selection-end-line="621" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/cyb3rwarri0r8/friendnamer/client/NamesEventHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="64" column="89" selection-start-line="64" selection-start-column="89" selection-end-line="64" selection-end-column="89" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

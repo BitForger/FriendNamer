@@ -1,11 +1,15 @@
 package io.cyb3rwarri0r8.friendnamer.client;
 
 
+import net.minecraft.util.IChatComponent;
+import net.minecraftforge.client.event.ClientChatReceivedEvent;
 import net.minecraftforge.fml.common.FMLLog;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.gameevent.PlayerEvent;
 import org.apache.logging.log4j.Level;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * FriendNamer - A Minecraft Modification
@@ -41,9 +45,24 @@ public class NamesEventHandler {
 		}
 	}
 
-
 	@SubscribeEvent
-	public void onPlayerLoggedIn( PlayerEvent.PlayerLoggedInEvent e ) {
-
+	public void onChatEvent( ClientChatReceivedEvent chatReceivedEvent ) {
+		FMLLog.log( Level.INFO, "Recieved client chat! Checking against username config" );
+		// Get the message
+		IChatComponent chatComponent = chatReceivedEvent.message;
+		// Get message type (unneeded)
+		byte type = chatReceivedEvent.type;
+		//Message String
+		String text = chatComponent.getUnformattedText();
+		// Test log
+		FMLLog.log( Level.INFO, text + " : " + type);
+		// Make the pattern
+		Pattern pattern = Pattern.compile( "/<([\\w+\\d+])>/g" );
+		// Match the pattern
+		Matcher matcher = pattern.matcher( chatReceivedEvent.message.getFormattedText() );
+		matcher.find();
+		// Log it FIXME it always comes out false.. why?
+		FMLLog.log( Level.INFO, "Does match: " + matcher.find() + "." + " Text is: " + matcher.group( 1 ) );
 	}
+
 }

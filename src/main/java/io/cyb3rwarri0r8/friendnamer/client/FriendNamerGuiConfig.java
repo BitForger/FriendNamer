@@ -35,37 +35,37 @@ import org.apache.logging.log4j.Level;
 
 
 public class FriendNamerGuiConfig extends GuiConfig {
-    /**
-     * GuiConfig constructor that will use ConfigChangedEvent when editing is concluded. If a non-null value is passed for configID,
-     * the OnConfigChanged and PostConfigChanged events will be posted when the Done button is pressed if any configElements were changed
-     * (includes child screens). If configID is not defined, the events will be posted if the parent gui is null or if the parent gui
-     * is not an instance of GuiConfig.
-     *
-     * @param parentScreen           the parent GuiScreen object
-     * @param configElements         a List of IConfigProperty objects
-     * @param modID                  the mod ID for the mod whose config settings will be edited
-     * @param configID               an identifier that will be passed to the OnConfigChanged and PostConfigChanged events. Setting this value will force
-     *                               the save action to be called when the Done button is pressed on this screen if any configElements were changed.
-     * @param allRequireWorldRestart send true if all configElements on this screen require a world restart
-     * @param allRequireMcRestart    send true if all configElements on this screen require MC to be restarted
-     * @param title                  the desired title for this screen. For consistency it is recommended that you pass the path of the config file being
-     */
-    public FriendNamerGuiConfig(GuiScreen parentScreen) {
-	    super( parentScreen,
-			    new ConfigElement( ConfigHandler.configuration.getCategory( Configuration.CATEGORY_GENERAL ) ).getChildElements(),
-			    Strings.MODID,
-			    false,
-			    false,
-			    GuiConfig.getAbridgedConfigPath( ConfigHandler.configuration.toString() ) );
-    }
+	/**
+	 * GuiConfig constructor that will use ConfigChangedEvent when editing is concluded. If a non-null value is passed for configID,
+	 * the OnConfigChanged and PostConfigChanged events will be posted when the Done button is pressed if any configElements were changed
+	 * (includes child screens). If configID is not defined, the events will be posted if the parent gui is null or if the parent gui
+	 * is not an instance of GuiConfig.
+	 *
+	 * @param parentScreen           the parent GuiScreen object
+	 * @param configElements         a List of IConfigProperty objects
+	 * @param modID                  the mod ID for the mod whose config settings will be edited
+	 * @param configID               an identifier that will be passed to the OnConfigChanged and PostConfigChanged events. Setting this value will force
+	 *                               the save action to be called when the Done button is pressed on this screen if any configElements were changed.
+	 * @param allRequireWorldRestart send true if all configElements on this screen require a world restart
+	 * @param allRequireMcRestart    send true if all configElements on this screen require MC to be restarted
+	 * @param title                  the desired title for this screen. For consistency it is recommended that you pass the path of the config file being
+	 */
+	public FriendNamerGuiConfig( GuiScreen parentScreen ) {
+		super( parentScreen,
+				new ConfigElement( ConfigHandler.configuration.getCategory( Configuration.CATEGORY_GENERAL ) ).getChildElements(),
+				Strings.MODID,
+				false,
+				false,
+				GuiConfig.getAbridgedConfigPath( ConfigHandler.configuration.toString() ) );
+	}
 
 	private EntityPlayer player = this.mc.thePlayer;
 
 	@Override
 	public void onGuiClosed() {
-		if (this.mc.currentScreen instanceof GuiIngameMenu){
-			FMLLog.log( Level.INFO, "Firing player#refreshDisplayName" );
-			player.refreshDisplayName();
-		}
+
+		FMLLog.log( Level.INFO, "Firing player#refreshDisplayName" );
+		player.refreshDisplayName();
+
 	}
 }
