@@ -5,6 +5,7 @@ import io.cyb3rwarri0r8.friendnamer.client.ConfigHandler;
 import io.cyb3rwarri0r8.friendnamer.client.NamesEventHandler;
 import io.cyb3rwarri0r8.friendnamer.lib.CommonProxy;
 import io.cyb3rwarri0r8.friendnamer.lib.Strings;
+import net.minecraft.client.Minecraft;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.FMLLog;
@@ -41,6 +42,8 @@ public class FriendNamer {
 
     @Mod.Instance
     public static FriendNamer instance;
+
+    public static Minecraft mcInstance;
 
 
     @Mod.EventHandler

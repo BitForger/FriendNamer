@@ -11,9 +11,9 @@ This mapping 'stable_20' was designed for MC 1.8.8! Use at your own peril.This m
 #################################################
 :setDevVersion
 :setDevVersion - Incrementing Dev Version
-:incrementPatch - Current Version: 0.3.0.59
-:incrementPatch - New Version:     0.3.0.60
+:incrementPatch - Current Version: 0.3.0.70
+:incrementPatch - New Version:     0.3.0.71
 
 BUILD SUCCESSFUL
 
-Total time: 10.373 secs
+Total time: 10.132 secs

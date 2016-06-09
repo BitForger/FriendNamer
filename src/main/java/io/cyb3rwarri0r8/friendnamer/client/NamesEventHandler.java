@@ -45,29 +45,23 @@ public class NamesEventHandler {
 
 	@SubscribeEvent
 	public void onChatEvent( ClientChatReceivedEvent chatReceivedEvent ) {
-		FMLLog.log( Level.INFO, "Recieved client chat! Checking against username config" );
+		FMLLog.log( Level.INFO, "Received client chat! Checking against username config" );
 		// Get the message
 		// Get message type (unneeded)
 		byte type = chatReceivedEvent.type;
 		//Message String
 		IChatComponent text = chatReceivedEvent.message;
-		// Test log
-		String string = text.getUnformattedText();
+		
+		String string = chatReceivedEvent.message.getUnformattedText();
 
-		FMLLog.log( Level.INFO, text + " : " + type);
 		// Make the pattern
-		Pattern pattern = Pattern.compile( "^<(\\w+)>.+" );
+		String pat = "<(\\w+)>";
+		Pattern pattern = Pattern.compile( pat );
 		// Match the pattern
 		Matcher matcher = pattern.matcher( string );
+		matcher.reset();
 
-		if ( matcher.find() ) {
-			// Log it FIXME it always comes out false.. why?
-			FMLLog.log( Level.INFO, "Does match: " + matcher.find() + "." + " Text is: " + matcher.pattern().toString() );
-			FMLLog.log( Level.INFO, string );
-		}
-		else {
-			FMLLog.log( Level.INFO, "Can not read the pattern! Aborting!" );
-		}
+		FMLLog.log( Level.DEBUG, "Does match: " + matcher.find() + "." + " Text is: " + matcher.group( 1 ) );
 
 	}
 
