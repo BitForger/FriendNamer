@@ -1,13 +1,15 @@
 package io.cyb3rwarri0r8.friendnamer.client;
 
 
+import net.minecraft.util.IChatComponent;
+import net.minecraftforge.client.event.ClientChatReceivedEvent;
 import net.minecraftforge.fml.common.FMLLog;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.gameevent.PlayerEvent;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 import org.apache.logging.log4j.Level;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * FriendNamer - A Minecraft Modification
@@ -27,16 +29,40 @@ import org.apache.logging.log4j.Level;
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 public class NamesEventHandler {
-//    public static net.minecraftforge.event.entity.player.PlayerEvent.NameFormat nameFormat;
-    @SideOnly(Side.CLIENT)
-    @SubscribeEvent(priority = EventPriority.HIGH, receiveCanceled = true)
-    public void onEvent(net.minecraftforge.event.entity.player.PlayerEvent.NameFormat event){
-        FMLLog.log(Level.DEBUG, "Firing PlayerEvent.NameFormat event");
-        for (int i = 0; i < ConfigHandler.usernames.length; i++){
-            if (event.displayname.equalsIgnoreCase(ConfigHandler.usernames[i])){
-                event.displayname = ConfigHandler.nicknames[i];
-                FMLLog.info("Username:" + event.username + " is now: " + ConfigHandler.nicknames[i]);
-            }
-        }
-    }
+	//    public static net.minecraftforge.event.entity.player.PlayerEvent.NameFormat nameFormat;
+
+
+	@SubscribeEvent( priority = EventPriority.HIGH )
+	public void onEvent( net.minecraftforge.event.entity.player.PlayerEvent.NameFormat event ) {
+		FMLLog.log( Level.DEBUG, "Firing PlayerEvent.NameFormat event" );
+		for ( int i = 0; i < ConfigHandler.usernames.length; i++ ) {
+			if ( event.displayname.equalsIgnoreCase( ConfigHandler.usernames[i] ) ) {
+				event.displayname = ConfigHandler.nicknames[i];
+				FMLLog.info( "Username: " + event.username + " is now: " + ConfigHandler.nicknames[i] );
+			}
+		}
+	}
+
+	@SubscribeEvent
+	public void onChatEvent( ClientChatReceivedEvent chatReceivedEvent ) {
+		FMLLog.log( Level.INFO, "Received client chat! Checking against username config" );
+		// Get the message
+		// Get message type (unneeded)
+		byte type = chatReceivedEvent.type;
+		//Message String
+		IChatComponent text = chatReceivedEvent.message;
+		
+		String string = chatReceivedEvent.message.getUnformattedText();
+
+		// Make the pattern
+		String pat = "<(\\w+)>";
+		Pattern pattern = Pattern.compile( pat );
+		// Match the pattern
+		Matcher matcher = pattern.matcher( string );
+		matcher.reset();
+
+		FMLLog.log( Level.DEBUG, "Does match: " + matcher.find() + "." + " Text is: " + matcher.group( 1 ) );
+
+	}
+
 }

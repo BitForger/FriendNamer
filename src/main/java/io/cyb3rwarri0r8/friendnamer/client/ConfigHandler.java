@@ -2,15 +2,14 @@ package io.cyb3rwarri0r8.friendnamer.client;
 
 
 import io.cyb3rwarri0r8.friendnamer.lib.Strings;
-import net.minecraftforge.client.event.GuiOpenEvent;
+import net.minecraft.client.Minecraft;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.common.config.Configuration;
-import net.minecraftforge.fml.client.GuiIngameModOptions;
+import net.minecraftforge.fml.client.GuiModList;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.FMLLog;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 import org.apache.logging.log4j.Level;
 
 import java.io.File;
@@ -33,47 +32,57 @@ import java.io.File;
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 public class ConfigHandler {
-    public static Configuration configuration;
+	static Configuration configuration;
 
-    public static String[] usernames;
+	static String[] usernames;
 
-    public static String[] nicknames;
+	static String[] nicknames;
+
+	private Minecraft mc = Minecraft.getMinecraft();
+
+	private EntityPlayer player = Minecraft.getMinecraft().thePlayer;
+
+	public static void init( File configFile ) {
+		if ( configuration == null ) {
+			configuration = new Configuration( configFile, true );
+			loadConfiguration();
+		}
+	}
+
+	private static void loadConfiguration() {
+		usernames = configuration.getStringList( "Usernames", Configuration.CATEGORY_GENERAL, new String[]{ "Enter", " Usernames" }, "Enter the username you want to change" );
+		nicknames = configuration.getStringList( "Nicknames", Configuration.CATEGORY_GENERAL, new String[]{ "Enter the nickname", " In the same position as the above username" }, "Enter the nickname" );
+		if ( configuration.hasChanged() ) {
+			configuration.save();
+		}
+	}
+
+
+	@SubscribeEvent( priority = EventPriority.HIGH )
+	public void onConfigurationChanged( ConfigChangedEvent.OnConfigChangedEvent event ) {
+		FMLLog.log( Level.DEBUG, "Config has changed!" );
+		if ( event.modID.equalsIgnoreCase( Strings.MODID ) ) {
+			FMLLog.log( Level.DEBUG, "Reloading Configuration!" );
+			loadConfiguration();
+		}
+		FMLLog.log( Level.INFO, mc.currentScreen.toString() );
+		if ( this.mc.currentScreen instanceof GuiModList ) {
+//			ForgeEventFactory.getPlayerDisplayName( mc.thePlayer, mc.thePlayer.getName() );
+			FMLLog.log( Level.WARN, "Attempting to fire name format event" );
+			player.refreshDisplayName();
+		}
+	}
 
 
 
-    public static void init(File configFile){
-        if (configuration == null){
-            configuration = new Configuration(configFile, true);
-            loadConfiguration();
-        }
-    }
+//	@SubscribeEvent( priority = EventPriority.NORMAL, receiveCanceled = true )
+//	public void onEvent( GuiOpenEvent event ) {
+//		if ( event.gui instanceof  ) {
+//			System.out.println( "GuiOpenEvent for GuiIngameModOptions" );
+//			event.gui = new FriendNamerGuiConfig( null );
+//		}
+//	}
 
-    private static void loadConfiguration(){
-        usernames = configuration.getStringList("Usernames", Configuration.CATEGORY_GENERAL, new String[]{"Enter"," Usernames"}, "Enter the username you want to change");
-        nicknames = configuration.getStringList("Nicknames", Configuration.CATEGORY_GENERAL, new String[]{"Enter the nickname", " In the same position as the above username"}, "Enter the nickname");
-        if (configuration.hasChanged()){
-            configuration.save();
-        }
-    }
 
-    @SideOnly(Side.CLIENT)
-    @SubscribeEvent(priority = EventPriority.HIGH)
-    public void onConfigurationChanged(ConfigChangedEvent.OnConfigChangedEvent event){
-        FMLLog.log(Level.DEBUG, "Config has changed!");
-        if (event.modID.equalsIgnoreCase(Strings.MODID)){
-            FMLLog.log(Level.DEBUG, "Reloading Configuration!");
-            loadConfiguration();
-        }
-    }
 
-    @SideOnly(Side.CLIENT)
-    @SubscribeEvent(priority=EventPriority.NORMAL, receiveCanceled=true)
-    public void onEvent(GuiOpenEvent event)
-    {
-        if (event.gui instanceof GuiIngameModOptions)
-        {
-            System.out.println("GuiOpenEvent for GuiIngameModOptions");
-            event.gui = new FriendNamerGuiConfig(null);
-        }
-    }
 }
