@@ -32,8 +32,6 @@ public class NamesEventHandler {
 	//    public static net.minecraftforge.event.entity.player.PlayerEvent.NameFormat nameFormat;
 
 
-
-
 	@SubscribeEvent( priority = EventPriority.HIGH )
 	public void onEvent( net.minecraftforge.event.entity.player.PlayerEvent.NameFormat event ) {
 		FMLLog.log( Level.DEBUG, "Firing PlayerEvent.NameFormat event" );
@@ -49,20 +47,28 @@ public class NamesEventHandler {
 	public void onChatEvent( ClientChatReceivedEvent chatReceivedEvent ) {
 		FMLLog.log( Level.INFO, "Recieved client chat! Checking against username config" );
 		// Get the message
-		IChatComponent chatComponent = chatReceivedEvent.message;
 		// Get message type (unneeded)
 		byte type = chatReceivedEvent.type;
 		//Message String
-		String text = chatComponent.getUnformattedText();
+		IChatComponent text = chatReceivedEvent.message;
 		// Test log
+		String string = text.getUnformattedText();
+
 		FMLLog.log( Level.INFO, text + " : " + type);
 		// Make the pattern
-		Pattern pattern = Pattern.compile( "/<(\\w+)>/g" );
+		Pattern pattern = Pattern.compile( "^<(\\w+)>.+" );
 		// Match the pattern
-		Matcher matcher = pattern.matcher( text );
-		matcher.find();
-		// Log it FIXME it always comes out false.. why?
-		FMLLog.log( Level.INFO, "Does match: " + matcher.find() + "." + " Text is: " + matcher.group( 1 ) );
+		Matcher matcher = pattern.matcher( string );
+
+		if ( matcher.find() ) {
+			// Log it FIXME it always comes out false.. why?
+			FMLLog.log( Level.INFO, "Does match: " + matcher.find() + "." + " Text is: " + matcher.pattern().toString() );
+			FMLLog.log( Level.INFO, string );
+		}
+		else {
+			FMLLog.log( Level.INFO, "Can not read the pattern! Aborting!" );
+		}
+
 	}
 
 }
