@@ -17,15 +17,15 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 
 
 // for people who want stable
-// plugins {
-//     id "net.minecraftforge.gradle.forge" version "2.0.2"
-// }
+/* plugins {
+     id "net.minecraftforge.gradle.forge" version "2.0.2"
+ }*/
 
 version = ""
 group= "io.github.cyb3rwarri0r8.friendnamer" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "friendnamer"
 
-def mcversion = "1.8"
+def mcversion = "1.8.9"
 def mod_version = version
 
 minecraft {

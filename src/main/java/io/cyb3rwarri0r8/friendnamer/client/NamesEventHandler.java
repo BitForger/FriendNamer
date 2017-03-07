@@ -53,15 +53,22 @@ public class NamesEventHandler {
 		IChatComponent text = chatReceivedEvent.message;
 		
 		String string = chatReceivedEvent.message.getUnformattedText();
+		try {
+            // Make the pattern
+            String pat = "<(\\w+)>";
+            Pattern pattern = Pattern.compile( pat );
+            FMLLog.log( Level.INFO, pat );
+            // Match the pattern
+            FMLLog.log(Level.INFO, string);
+            Matcher matcher = pattern.matcher( string );
+            matcher.reset();
 
-		// Make the pattern
-		String pat = "<(\\w+)>";
-		Pattern pattern = Pattern.compile( pat );
-		// Match the pattern
-		Matcher matcher = pattern.matcher( string );
-		matcher.reset();
+            FMLLog.log( Level.INFO, "Does match: " + matcher.find() + "." + " Text is: " + matcher.group( 1 ) );
+        }
+        catch (IllegalStateException e) {
+		    FMLLog.bigWarning("Illegal match!\n" + e);
+        }
 
-		FMLLog.log( Level.DEBUG, "Does match: " + matcher.find() + "." + " Text is: " + matcher.group( 1 ) );
 
 	}
 

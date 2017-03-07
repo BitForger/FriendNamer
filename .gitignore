@@ -50,3 +50,5 @@ crashlytics-build.properties
 
 *.txt
 *.hprof
+eclipse/logs
+/eclipse/saves

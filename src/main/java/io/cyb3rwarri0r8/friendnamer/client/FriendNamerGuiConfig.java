@@ -65,7 +65,10 @@ public class FriendNamerGuiConfig extends GuiConfig {
 	public void onGuiClosed() {
 
 		FMLLog.log( Level.INFO, "Firing player#refreshDisplayName" );
-		player.refreshDisplayName();
+		if (isWorldRunning) {
+			player.refreshDisplayName();
+		}
+
 
 	}
 }
